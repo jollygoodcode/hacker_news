@@ -1,0 +1,3 @@
+class LinksController
+
+end
