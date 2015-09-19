@@ -10,6 +10,7 @@ gem "turbolinks"
 
 group :development, :test do
   gem "byebug"
+  gem "rspec-rails", "~> 3.3.3" # lock here so this tutorial won't break
 end
 
 group :development do
