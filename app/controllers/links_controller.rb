@@ -3,5 +3,6 @@ class LinksController < ApplicationController
   end
 
   def new
+    @link = Link.new
   end
 end
