@@ -1,3 +1,3 @@
-class Link
+class Link < ActiveRecord::Base
 
 end
