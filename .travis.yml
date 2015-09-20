@@ -1,0 +1,7 @@
+language: ruby
+rvm:
+  - 2.2.3
+before_script:
+  - bin/setup
+script:
+  - bundle exec rspec
