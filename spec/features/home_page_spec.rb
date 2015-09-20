@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.feature "Home Page" do
   scenario "should see submitted links" do
-    link = FactoryGirl.create(:link)
+    link = create(:link)
 
     visit root_path
 
