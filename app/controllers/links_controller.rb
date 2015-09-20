@@ -11,6 +11,9 @@ class LinksController < ApplicationController
     redirect_to @link
   end
 
+  def show
+  end
+
   private
 
     def model_params
