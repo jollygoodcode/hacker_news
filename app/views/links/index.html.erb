@@ -4,7 +4,7 @@
 <% @links.each do |link| %>
   <li id=<%= dom_id(link) %>>
     <div data-spec="score"><%= link.scores %></div>
-    <%= link_to "+1", "#" %>
+    <%= link_to "+1", link_upvote_path(link), method: :post %>
     <%= link_to link.title, link.url %>
   </li>
 <% end %>
