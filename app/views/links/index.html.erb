@@ -2,6 +2,9 @@
 
 <ul>
 <% @links.each do |link| %>
-  <li><%= link_to link.title, link.url %></li>
+  <li id=<%= dom_id(link) %>>
+    <div data-spec="score"><%= link.scores %></div>
+    <%= link_to link.title, link.url %>
+  </li>
 <% end %>
 </ul>
