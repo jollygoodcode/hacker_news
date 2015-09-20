@@ -20,4 +20,5 @@ end
 
 group :test do
   gem "capybara", "~> 2.5.0" # lock here so this tutorial won't break
+  gem "database_rewinder"
 end
