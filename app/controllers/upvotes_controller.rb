@@ -1,0 +1,3 @@
+class UpvotesController < ApplicationController
+
+end
