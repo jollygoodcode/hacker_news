@@ -11,6 +11,7 @@ gem "turbolinks"
 group :development, :test do
   gem "byebug"
   gem "rspec-rails", "~> 3.3.3" # lock here so this tutorial won't break
+  gem "factory_girl_rails", "~> 4.5.0" # lock here so this tutorial won't break
 end
 
 group :development do
