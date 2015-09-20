@@ -7,5 +7,13 @@ class LinksController < ApplicationController
   end
 
   def create
+    @link = Link.create(model_params)
+    redirect_to @link
   end
+
+  private
+
+    def model_params
+      params.require(:link).permit(:title, :url)
+    end
 end
