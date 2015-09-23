@@ -1,6 +1,17 @@
 require "rails_helper"
 
 RSpec.describe LinksController do
+  describe "#index" do
+    def do_request
+      get :index
+    end
+
+    it "success" do
+      do_request
+      expect(response).to be_success
+    end
+  end
+
   describe "#create" do
     def do_request
       post :create, link: params
