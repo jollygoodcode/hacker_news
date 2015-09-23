@@ -6,6 +6,19 @@ RSpec.describe LinksController do
       post :create, link: params
     end
 
+    context "success" do
+      let(:params) { Hash(title: "depbbot.com", url: "https://www.deppbot.com") }
+
+      it "creates a link" do
+        expect { do_request }.to change(Link, :count).by(1)
+      end
+
+      it "redirects" do
+        do_request
+        expect(response).to redirect_to link_path(assigns(:link))
+      end
+    end
+
     context "failure" do
       let(:params) { Hash(url: nil) }
 
