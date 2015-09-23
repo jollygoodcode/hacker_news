@@ -12,6 +12,17 @@ RSpec.describe LinksController do
     end
   end
 
+  describe "#new" do
+    def do_request
+      get :new
+    end
+
+    it "success" do
+      do_request
+      expect(response).to be_success
+    end
+  end
+
   describe "#create" do
     def do_request
       post :create, link: params
