@@ -1,4 +1,6 @@
 <%= form_for @link do |f| %>
+  <%= render "form_errors", object: @link %>
+
   <div>
     <%= f.label :title %>
     <%= f.text_field :title %>
