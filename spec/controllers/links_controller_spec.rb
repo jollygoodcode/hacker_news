@@ -1,6 +1,28 @@
 require "rails_helper"
 
 RSpec.describe LinksController do
+  describe "#index" do
+    def do_request
+      get :index
+    end
+
+    it "success" do
+      do_request
+      expect(response).to be_success
+    end
+  end
+
+  describe "#new" do
+    def do_request
+      get :new
+    end
+
+    it "success" do
+      do_request
+      expect(response).to be_success
+    end
+  end
+
   describe "#create" do
     def do_request
       post :create, link: params
@@ -30,6 +52,19 @@ RSpec.describe LinksController do
         do_request
         expect(response).to render_template(:new)
       end
+    end
+  end
+
+  describe "#show" do
+    let(:link) { create(:link) }
+
+    def do_request
+      get :show, id: link.id
+    end
+
+    it "success" do
+      do_request
+      expect(response).to be_success
     end
   end
 end
