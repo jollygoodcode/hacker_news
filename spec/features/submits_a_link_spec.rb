@@ -14,4 +14,17 @@ RSpec.feature "Submits a link" do
 
     expect(page).to have_link title, href: url
   end
+
+  context "invalid link" do
+    scenario "should see error messages" do
+      title = "deppbot"
+
+      visit new_link_path
+
+      fill_in "Title", with: title
+      click_on "Submit"
+
+      expect(page).to have_content "Url can't be blank"
+    end
+  end
 end
