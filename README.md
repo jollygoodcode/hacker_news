@@ -1,30 +1,37 @@
-## README
+# README
+
+Clone of [Hacker News](https://news.ycombinator.com/) for teaching testing in Rails.
 
 [![Build Status](https://travis-ci.org/jollygoodcode/hacker_news.svg)](https://travis-ci.org/jollygoodcode/hacker_news)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup Dev
 
-Things you may want to cover:
+- Install Ruby
+- Install Rails
+- Clone this repository
+- Run `bundle` to install dependencies
+- Run `bundle exec rspec` to run tests
 
-* Ruby version
+## Examples
 
-* System dependencies
+- 1. [Setup rspec-rails](https://github.com/jollygoodcode/hacker_news/pull/1)
+- 2. [Feature Specs](https://github.com/jollygoodcode/hacker_news/pull/2)
+  * Outside-in
+  * Testing Phrases
+  * Create and Read
+- 3. [Navigation with Capybara](https://github.com/jollygoodcode/hacker_news/pull/3)
+  * Fixture, Factory Girl
+  * DatabaseRewinder
+- 4. [Continuous Integration](https://github.com/jollygoodcode/hacker_news/pull/4)
+  * Setup Travis CI
+- 5. [Spec-driven migration](https://github.com/jollygoodcode/hacker_news/pull/6)
+  * `Link#scores`
+  * `data-spec` for finding elements
+- 6. [Model Specs](https://github.com/jollygoodcode/hacker_news/pull/7)
+  * `Link#upvote`
+- 7. [Shoulda Matchers & Controller Specs](https://github.com/jollygoodcode/hacker_news/pull/8)
+  * Why shoulda-matchers
+  * Extract method in specs
+  * Sad path
+- 8. [More Controller Spec](https://github.com/jollygoodcode/hacker_news/pull/9)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
